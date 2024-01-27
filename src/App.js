@@ -26,6 +26,11 @@ import Update from "./component/Life -cycle-methods/updating-phase"
 import Unmounting from "./component/Life -cycle-methods/unmounting-phase"
 import UseStateEx from "./component/hook/usestate/usestateEx1"
 import UseStateEx2 from "./component/hook/usestate/usestateEx2"
+import UseStateEx3 from "./component/hook/usestate/usestateEx3"
+import UnControll from "./component/forms/uncontrolled"
+import Controlled from "./component/forms/controlled"
+import ButtonCircles from "./component/hook/usestate/circleExample"
+import Registration from "./component/forms/registration"
 
 //     </ol>
 //     <h2>Table</h2>
@@ -197,12 +202,38 @@ import UseStateEx2 from "./component/hook/usestate/usestateEx2"
 // export default App
 // day 22/1/24 hooks==>usestate example
 
+// function App(){
+ 
+//   return(
+//     <>
+//      {/* <UseStateEx/> */}
+//      <UseStateEx2/>
+//     </>
+//   )
+// }
+// export default App
+
+// day 23/1/24 usestate example 3 and uncontroll validation
+// function App(){
+ 
+//   return(
+//     <>
+//    {/* <UseStateEx3/> */}
+//    <UnControll/>
+//     </>
+//   )
+// }
+// export default App
+
+// day 24/1/24 controlled forms and circle task
+
 function App(){
  
   return(
     <>
-     {/* <UseStateEx/> */}
-     <UseStateEx2/>
+    {/* <Controlled/> */}
+    {/* <ButtonCircles/> */}
+    <Registration/>
     </>
   )
 }
