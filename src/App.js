@@ -7,30 +7,35 @@
 //       <li>maths</li>
 //       <li>social</li>
 
-import Buttoncomponent from "./component/button/button-component"
-import ModuleStyles from "./component/module-style"
-import Like from "./component/list/list"
-import Order from "./component/order list/order list"
-import Table from "./component/table/table"
-import { All } from "./component/list of all/all"
-import Buttoncomponent1 from "./component/button/button-component"
-import ApiCall from "./component/exception handling/api call"
-// bootstrap styling
-import 'bootstrap/dist/css/bootstrap.min.css';
-import BasicExample from "./component/bootstrap/first-comonent"
-import MapMethod from './component/bootstrap/mapMethod';
-import  ParentComponent from "./component/props/parent"
-import Counter from "./component/counter/counter"
-import Mounting from "./component/Life -cycle-methods/mounting-phase"
-import Update from "./component/Life -cycle-methods/updating-phase"
-import Unmounting from "./component/Life -cycle-methods/unmounting-phase"
-import UseStateEx from "./component/hook/usestate/usestateEx1"
-import UseStateEx2 from "./component/hook/usestate/usestateEx2"
-import UseStateEx3 from "./component/hook/usestate/usestateEx3"
-import UnControll from "./component/forms/uncontrolled"
 import Controlled from "./component/forms/controlled"
-import ButtonCircles from "./component/hook/usestate/circleExample"
-import Registration from "./component/forms/registration"
+import UnControll from "./component/forms/uncontrolled"
+import NavigationStack from "./navigationStack/navigation"
+
+// import Buttoncomponent from "./component/button/button-component"
+// import ModuleStyles from "./component/module-style"
+// import Like from "./component/list/list"
+// import Order from "./component/order list/order list"
+// import Table from "./component/table/table"
+// import { All } from "./component/list of all/all"
+// import Buttoncomponent1 from "./component/button/button-component"
+// import ApiCall from "./component/exception handling/api call"
+// // bootstrap styling
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import BasicExample from "./component/bootstrap/first-comonent"
+// import MapMethod from './component/bootstrap/mapMethod';
+// import  ParentComponent from "./component/props/parent"
+// import Counter from "./component/counter/counter"
+// import Mounting from "./component/Life -cycle-methods/mounting-phase"
+// import Update from "./component/Life -cycle-methods/updating-phase"
+// import Unmounting from "./component/Life -cycle-methods/unmounting-phase"
+// import UseStateEx from "./component/hook/usestate/usestateEx1"
+// import UseStateEx2 from "./component/hook/usestate/usestateEx2"
+// import UseStateEx3 from "./component/hook/usestate/usestateEx3"
+// import UnControll from "./component/forms/uncontrolled"
+// import Controlled from "./component/forms/controlled"
+// import ButtonCircles from "./component/hook/usestate/circleExample"
+// import Registration from "./component/forms/registration"
+// import RotateCircle from "./component/hook/usestate/inputCircle"
 
 //     </ol>
 //     <h2>Table</h2>
@@ -227,14 +232,30 @@ import Registration from "./component/forms/registration"
 
 // day 24/1/24 controlled forms and circle task
 
-function App(){
+// function App(){
  
-  return(
-    <>
-    {/* <Controlled/> */}
-    {/* <ButtonCircles/> */}
-    <Registration/>
-    </>
-  )
-}
-export default App
+//   return(
+//     <>
+//     {/* <Controlled/> */}
+//     {/* <ButtonCircles/> */}
+//     {/* <Registration/> */}
+//     <RotateCircle/>
+//     </>
+//   )
+// }
+// export default App
+
+// day 29/1/24 navigation
+
+ function App(){
+ 
+    return(
+      <>
+      <NavigationStack/>
+      {/* <Controlled/> */}
+      {/* <UnControll/> */}
+      </>
+    )
+  }
+  export default App
+

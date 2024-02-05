@@ -29,9 +29,22 @@ const MapMethod =()=>{
     return(
         <>
 
-        {members.map((details)=><ProfileCard profile={details} key={details.id }/>)}
-      
+     
+        <div class="jumbotron text-center">
+  <h1>My First Bootstrap Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" style={{display:"grid",gridTemplateColumns:"100% 100% 100%", gap:"10px"}}>
+    {members.map((details)=><ProfileCard profile={details} key={details.id }/>)}
+    </div>
+    </div>
+    </div>
         </>
+      
+       
         
     )
    

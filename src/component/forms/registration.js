@@ -54,31 +54,36 @@ const Registration=()=>{
   case  (!(/[0-9]/.test(psw))):
     msg = false
     break
-  case (psw == psw.toLowerCase()) || (psw == psw.toUpperCase()):
+  case (psw === psw.toLowerCase()) || (psw === psw.toUpperCase()):
     msg = false 
     break
   case ( psw.includes(username)):
     msg = false
     break
+    default:
+      return msg
   }
-  return msg
+ 
 }
 
  const ConfirmHandle=(event)=>{
+
   event.preventDefault();
-  setConfirmPassword(event.target.value)
-  if(password!==confirmPassword){
-    console.log(event.target.value);
-    setConfirmErrorPassword("Passwords do not match");
-    console.log(event.target.value);
-    return;
-}else{
-   setConfirmErrorPassword(""); 
+
+ let pass = event.target.value
+
+  setConfirmPassword(event.target.value);
+
+  if(password === pass){
+    setConfirmErrorPassword(""); 
    console.log("password match");
+}else{
+  
+   setConfirmErrorPassword("Passwords do not match");
+   
 }
   }
 
- 
 
   const emailHandler=(event)=>{
     setemail(event.target.value)
@@ -103,20 +108,15 @@ const Registration=()=>{
 
   const submitHandler =(event)=>{
      event.preventDefault()
-
-      //  server hit
       const userDetails={
        userName,
        password,
        confirmPassword,
-       email
+       email,
       }
        console.log(userDetails,"userDetails");
-
   }
  
-
-
     return(
       <>
 
@@ -136,7 +136,7 @@ const Registration=()=>{
          
 
          <div className="mb-3">
-          <label  className="form-label">Password:</label>
+          <label   className="form-label">Password:</label>
           <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="pswd" value={password} onChange={passwordHandler} />
 
           {
@@ -145,7 +145,7 @@ const Registration=()=>{
             :
             null
           }
-          
+
          </div>
          <div>
          <label  className="form-label">confirm password:</label>
@@ -171,10 +171,8 @@ const Registration=()=>{
         
          
         {
-            errorUsename || passwordError || confirmErrorPassword ||errorEmail? null :
+            errorUsename || passwordError || confirmErrorPassword ||errorEmail ? null :
 
-
-            
          <button type="submit" className="btn btn-primary">Submit</button>
 
         }

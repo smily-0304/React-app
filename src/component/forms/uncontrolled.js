@@ -1,4 +1,5 @@
-import { useRef, useState } from "react"
+import { useContext, useRef, useState } from "react"
+import { DataShare } from "../../navigationStack/navigation"
 
 
 
@@ -8,6 +9,7 @@ const UnControll =()=>{
     const emailRef=useRef()
     const passwordRef=useRef()
     const[error,seterror]=useState("")
+    const{loginTrue}=useContext(DataShare)
 
 
 
@@ -48,6 +50,8 @@ const UnControll =()=>{
 
     }else{
         alert("successfull login")
+        loginTrue()
+        localStorage.setItem("userLoginInfo",res.data)
         seterror("")
     }
 
@@ -60,8 +64,8 @@ const UnControll =()=>{
 
      <form  onSubmit={handleSubmit}>
          <div className="mb-3 mt-3">
-           <label  className="form-label">Email:</label>
-          <input type="text" className="form-control" id="email" placeholder="Enter email" name="email" ref={emailRef}/>
+           <label  className="form-label">Username:</label>.
+          <input type="text" className="form-control" id="email" placeholder="Enter username" name="email" ref={emailRef}/>
          </div>
          <div className="mb-3">
           <label  className="form-label">Password:</label>
