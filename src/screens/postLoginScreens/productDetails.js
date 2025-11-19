@@ -2,28 +2,33 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { Button, Card } from "react-bootstrap"
 import { Link, useParams } from "react-router-dom"
+import { useAxios } from "../../component/hook/customHooks/useAxios"
+import Footer from "../../component/navBar/footer"
 
 
 
-const ProductDetails=()=>{
+const ProductDetails=()=>{ 
    const routeInformation = useParams()
-   const[productDetails1,setProductDetails1]=useState({})
-    console.log(routeInformation)
-   useEffect(()=>{
-    fetchEachproduct(routeInformation.id)
-   },[routeInformation.id])
+  //  const[productDetails1,setProductDetails1]=useState({})
+
+   const[productDetails1]=useAxios(`https://fakestoreapi.com/products/${routeInformation.id}`)
+   console.log(productDetails1);
+    // console.log(routeInformation)
+//    useEffect(()=>{
+//     fetchEachproduct(routeInformation.id)
+//    },[routeInformation.id])
   
    
-const fetchEachproduct=(id)=>{
-    axios.get(`https://fakestoreapi.com/products/${id}`)
-    .then(response=>{
-       if(response.status===200){
-        setProductDetails1(response.data)
-       }else{
-        alert("req failed")
-       }
-    })
-}
+// const fetchEachproduct=(id)=>{
+//     axios.get(`https://fakestoreapi.com/products/${id}`)
+//     .then(response=>{
+//        if(response.status===200){
+//         setProductDetails1(response.data)
+//        }else{
+//         alert("req failed")
+//        }
+//     })
+// }
        
 
 
@@ -40,9 +45,10 @@ const fetchEachproduct=(id)=>{
             <p>{productDetails1.description}</p>
             <h3>{productDetails1.category}</h3>
             <h3>{productDetails1.price}</h3>
-            <h3>{productDetails1.rating.rate}</h3> 
+            {/* <h3>{productDetails1.rating}</h3>  */}
             </>
-
+               :
+              <h5>loading</h5>
                   /* <Card key={productDetails1.id} style={{ width: "18rem",margin:"10px" }}>
                     <Card.Img
                       variant="top"
@@ -60,9 +66,9 @@ const fetchEachproduct=(id)=>{
 
                 
             
-            :
-            <h5>loading</h5>
+           
         }
+        <Footer/>
        
         </>
         

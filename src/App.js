@@ -8,7 +8,18 @@
 //       <li>social</li>
 
 import Controlled from "./component/forms/controlled"
+import FormSubmit from "./component/forms/task";
 import UnControll from "./component/forms/uncontrolled"
+import Control from "./component/pratice/control";
+import FormSubmits from "./component/pratice/form";
+import Parent from "./component/pratice/parent";
+import ProfileUser from "./component/pratice/parent";
+import ParentCom from "./component/pratice/parent";
+import Parent1 from "./component/pratice/pratice-1/parent";
+import PaginationExample from "./component/pratice/pratices-hooks";
+import UseMemoEx1 from "./component/pratice/pratices-hooks";
+import UncontrolEx1 from "./component/pratice/uncontrolll";
+import UseEffect from "./component/pratice/useeffectex";
 import NavigationStack from "./navigationStack/navigation"
 
 // import Buttoncomponent from "./component/button/button-component"
@@ -251,9 +262,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  
     return(
       <>
-      <NavigationStack/>
+      {/* <NavigationStack/> */}
       {/* <Controlled/> */}
       {/* <UnControll/> */}
+      {/* pratice */}
+      {/* <UseMemoEx1/> */}
+      {/* <UncontrolEx1/> */}
+      {/* <Control/> */}
+      {/* <UseEffect/> */}
+      {/* <PaginationEx>ample/> */}
+      {/* <ParentCom/> */}
+      {/* <ProfileUser/> */}
+      {/* <Parent/> */}
+      {/* <Parent1/> */}
+    <FormSubmits/>
       </>
     )
   }

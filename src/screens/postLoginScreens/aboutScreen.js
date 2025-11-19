@@ -2,6 +2,7 @@ import { useContext } from "react"
 import NavBar from "../../component/navBar/navBar"
 import { DataShare } from "../../navigationStack/navigation"
 import UseReduceExample from "../../component/hook/useReducer/useReducer"
+import Footer from "../../component/navBar/footer"
 
 
 
@@ -16,6 +17,7 @@ const AboutScreen =()=>{
              </div> */}
         <h3>hii this is about screen</h3>
         <h2>shop more in {name}</h2>
+        <Footer/>
         </>
     )
 }

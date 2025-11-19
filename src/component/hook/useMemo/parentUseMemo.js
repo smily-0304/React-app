@@ -8,7 +8,7 @@ import { timeToGreeting } from "../../../utills/dateHelper";
 const UseMemoParent=()=>{
     const data=new Date()
     // console.log(data.getDay())
-    console.log(data.getHours());
+    // console.log(data.getHours());
 
 
     // const[greeting,setGreeting]=useState("Good Morning")

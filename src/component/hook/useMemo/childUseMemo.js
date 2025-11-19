@@ -7,7 +7,7 @@ const UseMemoChild=({greeting1})=>{
     const[age,setAge]=useState(5)
      // for greeting in chapital
      const upperCaseMemorizedValue=useMemo( ()=>{
-        console.log("lowerToUperCase faunction");
+        // console.log("lowerToUperCase faunction");
         // expensive Calculation
         // for(let i=0;i<100;i++){
         //     console.log(i);
